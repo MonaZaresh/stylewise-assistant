@@ -12,9 +12,9 @@ const UploadPage = () => {
       description: `Starting ${method} upload...`,
     });
     // In a real app, we would handle the upload here
-    // For now, we'll simulate success and navigate
+    // For now, we'll simulate success and navigate to the next quiz step
     setTimeout(() => {
-      navigate("/premium");
+      navigate("/quiz");
     }, 1500);
   };
 
