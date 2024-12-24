@@ -9,6 +9,7 @@ import UploadPage from "./pages/Upload";
 import Premium from "./pages/Premium";
 import AIAnalysis from "./pages/AIAnalysis";
 import Recommendations from "./pages/Recommendations";
+import Survey from "./pages/Survey";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/analysis" element={<AIAnalysis />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/premium" element={<Premium />} />
+          <Route path="/survey" element={<Survey />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

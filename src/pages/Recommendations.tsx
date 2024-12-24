@@ -1,12 +1,56 @@
 import { BottomNav } from "@/components/BottomNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ChevronRight, Star } from "lucide-react";
+import { Check, ChevronRight, Star, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+// Add this interface for type safety
+interface ExpandedImageProps {
+  src: string;
+  alt: string;
+  onClose: () => void;
+}
+
+// Create a new component for the expanded image
+const ExpandedImage: React.FC<ExpandedImageProps> = ({ src, alt, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+      <div className="relative max-w-4xl w-full">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+        >
+          <X className="w-6 h-6" />
+        </button>
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+        />
+      </div>
+    </div>
+  );
+};
 
 const Recommendations = () => {
+  // Add state for expanded image
+  const [expandedImage, setExpandedImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
   return (
     <div className="min-h-screen bg-white pb-20">
+      {/* Expanded image modal */}
+      {expandedImage && (
+        <ExpandedImage
+          src={expandedImage.src}
+          alt={expandedImage.alt}
+          onClose={() => setExpandedImage(null)}
+        />
+      )}
+
       <div className="px-4 py-8">
         <h1 className="text-2xl font-semibold mb-6">Your Interview Looks</h1>
         
@@ -23,9 +67,13 @@ const Recommendations = () => {
               
               <div className="mt-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80" 
+                  src="https://i.pinimg.com/564x/37/20/b0/3720b00695619b444515c649aadd5e9c.jpg" 
                   alt="Professional blazer outfit"
-                  className="w-full h-48 object-cover rounded-md mb-4"
+                  className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer transition-transform hover:scale-[1.02]"
+                  onClick={() => setExpandedImage({
+                    src: "https://i.pinimg.com/564x/37/20/b0/3720b00695619b444515c649aadd5e9c.jpg",
+                    alt: "Professional blazer outfit"
+                  })}
                 />
                 <div className="space-y-2 text-sm">
                   <p>• Navy blazer with white button-up</p>
@@ -48,9 +96,13 @@ const Recommendations = () => {
               
               <div className="mt-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=800&q=80" 
+                  src="https://i.pinimg.com/originals/e9/91/80/e9918042f30514034000c65eb933ed65.jpg" 
                   alt="Business casual outfit"
-                  className="w-full h-48 object-cover rounded-md mb-4"
+                  className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer transition-transform hover:scale-[1.02]"
+                  onClick={() => setExpandedImage({
+                    src: "https://i.pinimg.com/originals/e9/91/80/e9918042f30514034000c65eb933ed65.jpg",
+                    alt: "Business casual outfit"
+                  })}
                 />
                 <div className="space-y-2 text-sm">
                   <p>• Gray blazer with light blue shirt</p>
