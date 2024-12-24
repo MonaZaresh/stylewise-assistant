@@ -1,4 +1,4 @@
-import { Star, Wand2, Palette } from "lucide-react";
+import { Star, Wand2, Palette, Check } from "lucide-react";
 import { BottomNav } from "@/components/BottomNav";
 
 const Premium = () => {
