@@ -21,10 +21,17 @@ const Recommendations = () => {
                 <Check className="text-primary" />
               </div>
               
-              <div className="mt-4 space-y-2 text-sm">
-                <p>• Navy blazer with white button-up</p>
-                <p>• Tailored black pants</p>
-                <p>• Classic pumps</p>
+              <div className="mt-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80" 
+                  alt="Professional blazer outfit"
+                  className="w-full h-48 object-cover rounded-md mb-4"
+                />
+                <div className="space-y-2 text-sm">
+                  <p>• Navy blazer with white button-up</p>
+                  <p>• Tailored black pants</p>
+                  <p>• Classic pumps</p>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -39,10 +46,17 @@ const Recommendations = () => {
                 <Check className="text-primary" />
               </div>
               
-              <div className="mt-4 space-y-2 text-sm">
-                <p>• Gray blazer with light blue shirt</p>
-                <p>• Navy pencil skirt</p>
-                <p>• Black leather flats</p>
+              <div className="mt-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=800&q=80" 
+                  alt="Business casual outfit"
+                  className="w-full h-48 object-cover rounded-md mb-4"
+                />
+                <div className="space-y-2 text-sm">
+                  <p>• Gray blazer with light blue shirt</p>
+                  <p>• Navy pencil skirt</p>
+                  <p>• Black leather flats</p>
+                </div>
               </div>
             </CardContent>
           </Card>
