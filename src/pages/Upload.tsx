@@ -1,4 +1,4 @@
-import { Camera, Image, Upload as UploadIcon } from "lucide-react";
+import { Camera, Image, UploadIcon } from "lucide-react";
 import { BottomNav } from "@/components/BottomNav";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast";
@@ -12,9 +12,9 @@ const UploadPage = () => {
       description: `Starting ${method} upload...`,
     });
     // In a real app, we would handle the upload here
-    // For now, we'll simulate success and navigate to the next quiz step
+    // For now, we'll simulate success and navigate to the AI analysis
     setTimeout(() => {
-      navigate("/quiz");
+      navigate("/analysis");
     }, 1500);
   };
 

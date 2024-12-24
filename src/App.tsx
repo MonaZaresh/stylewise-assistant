@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import StyleQuiz from "./pages/StyleQuiz";
 import UploadPage from "./pages/Upload";
 import Premium from "./pages/Premium";
+import AIAnalysis from "./pages/AIAnalysis";
+import Recommendations from "./pages/Recommendations";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/quiz" element={<StyleQuiz />} />
           <Route path="/upload" element={<UploadPage />} />
+          <Route path="/analysis" element={<AIAnalysis />} />
+          <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/premium" element={<Premium />} />
         </Routes>
       </BrowserRouter>
