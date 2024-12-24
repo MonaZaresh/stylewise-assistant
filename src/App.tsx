@@ -4,6 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import StyleQuiz from "./pages/StyleQuiz";
+import Upload from "./pages/Upload";
+import Premium from "./pages/Premium";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +18,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/quiz" element={<StyleQuiz />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/premium" element={<Premium />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
