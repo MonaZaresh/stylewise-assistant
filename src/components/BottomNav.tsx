@@ -17,13 +17,13 @@ export const BottomNav = () => {
           <Camera size={24} />
           <span className="text-xs mt-1">Upload</span>
         </Link>
-        <Link to="/premium" className={`flex flex-col items-center ${isActive('/premium') ? 'text-primary' : 'text-gray-500'}`}>
-          <Star size={24} />
-          <span className="text-xs mt-1">Premium</span>
-        </Link>
         <Link to="/survey" className={`flex flex-col items-center ${isActive('/survey') ? 'text-primary' : 'text-gray-500'}`}>
           <User size={24} />
           <span className="text-xs mt-1">Survey</span>
+        </Link>
+        <Link to="/premium" className={`flex flex-col items-center ${isActive('/premium') ? 'text-primary' : 'text-gray-500'}`}>
+          <Star size={24} />
+          <span className="text-xs mt-1">Premium</span>
         </Link>
       </div>
     </nav>
